@@ -1,0 +1,4 @@
+com\selflearning\services\room\roomservices\repository\RoomRepository.class
+com\selflearning\services\room\roomservices\domain\RoomEntity.class
+com\selflearning\services\room\roomservices\web\rest\RoomController.class
+com\selflearning\services\room\roomservices\RoomServicesApplication.class
