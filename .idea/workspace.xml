@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="331b59c0-6623-4c0c-8d02-58a937cf64ad" name="Default Changelist" comment="">
+    <list default="true" id="331b59c0-6623-4c0c-8d02-58a937cf64ad" name="Default Changelist" comment="add-eureka-server-changes">
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_dataformat_jackson_dataformat_xml_2_10_3.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_jaxb_annotations_2_10_3.xml" afterDir="false" />
@@ -100,6 +100,19 @@
       <change afterPath="$PROJECT_DIR$/eureka-server/target/classes/application.properties" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/eureka-server/target/classes/com/selflearning/service/discovery/eurekaserver/EurekaServerApplication.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/eureka-server/target/test-classes/com/selflearning/service/discovery/eurekaserver/EurekaServerApplicationTests.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reservation-business-services/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reservation-business-services/reservation-business-services.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reservation-business-services/src/main/java/com/selflearning/business/reservation/reservationbusinessservices/ReservationBusinessServicesApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reservation-business-services/src/main/java/com/selflearning/business/reservation/reservationbusinessservices/domain/Room.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reservation-business-services/src/main/java/com/selflearning/business/reservation/reservationbusinessservices/web/rest/RoomReservationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reservation-business-services/src/main/resources/bootstrap.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reservation-business-services/src/test/java/com/selflearning/business/reservation/reservationbusinessservices/ReservationBusinessServicesApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reservation-business-services/target/classes/bootstrap.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reservation-business-services/target/classes/com/selflearning/business/reservation/reservationbusinessservices/ReservationBusinessServicesApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reservation-business-services/target/classes/com/selflearning/business/reservation/reservationbusinessservices/domain/Room.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reservation-business-services/target/classes/com/selflearning/business/reservation/reservationbusinessservices/web/rest/RoomReservationController$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reservation-business-services/target/classes/com/selflearning/business/reservation/reservationbusinessservices/web/rest/RoomReservationController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reservation-business-services/target/test-classes/com/selflearning/business/reservation/reservationbusinessservices/ReservationBusinessServicesApplicationTests.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
@@ -110,9 +123,7 @@
       <change beforePath="$PROJECT_DIR$/config-server/mvnw" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/config-server/mvnw.cmd" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/room-services/HELP.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/room-services/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/room-services/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/room-services/room-services.iml" beforeDir="false" afterPath="$PROJECT_DIR$/room-services/room-services.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/room-services/src/main/java/com/selflearning/services/room/roomservices/RoomServicesApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/room-services/src/main/java/com/selflearning/services/room/roomservices/RoomServicesApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/room-services/target/classes/com/selflearning/services/room/roomservices/RoomServicesApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/room-services/target/classes/com/selflearning/services/room/roomservices/RoomServicesApplication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/room-services/target/classes/com/selflearning/services/room/roomservices/domain/RoomEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/room-services/target/classes/com/selflearning/services/room/roomservices/domain/RoomEntity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/room-services/target/classes/com/selflearning/services/room/roomservices/repository/RoomRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/room-services/target/classes/com/selflearning/services/room/roomservices/repository/RoomRepository.class" afterDir="false" />
@@ -132,6 +143,7 @@
     <ignored path="$PROJECT_DIR$/config-server/target/" />
     <ignored path="$PROJECT_DIR$/eurika-server/target/" />
     <ignored path="$PROJECT_DIR$/eureka-server/target/" />
+    <ignored path="$PROJECT_DIR$/reservation-business-services/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,44 +205,53 @@
     <session id="-153090032">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="11" />
+          <entry key="project.open.time.102" value="1" />
+          <entry key="project.open.time.110" value="1" />
           <entry key="project.open.time.119" value="1" />
+          <entry key="project.open.time.122" value="1" />
+          <entry key="project.open.time.62" value="1" />
           <entry key="project.open.time.67" value="1" />
+          <entry key="project.open.time.68" value="1" />
           <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.72" value="1" />
+          <entry key="project.open.time.76" value="1" />
           <entry key="project.open.time.88" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="115" />
-          <entry key="properties" value="117" />
-          <entry key="txt" value="25" />
+          <entry key="java" value="492" />
+          <entry key="properties" value="215" />
+          <entry key="txt" value="40" />
           <entry key="xml" value="75" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="115" />
-          <entry key="PLAIN_TEXT" value="25" />
-          <entry key="Properties" value="117" />
+          <entry key="JAVA" value="492" />
+          <entry key="PLAIN_TEXT" value="40" />
+          <entry key="Properties" value="215" />
           <entry key="XML" value="75" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="iml" value="2" />
-          <entry key="java" value="9" />
-          <entry key="properties" value="2" />
-          <entry key="xml" value="4" />
+          <entry key="gitignore" value="1" />
+          <entry key="iml" value="3" />
+          <entry key="java" value="13" />
+          <entry key="properties" value="6" />
+          <entry key="xml" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="IDEA_MODULE" value="2" />
-          <entry key="JAVA" value="9" />
-          <entry key="Properties" value="2" />
-          <entry key="XML" value="4" />
+          <entry key="IDEA_MODULE" value="3" />
+          <entry key="JAVA" value="13" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Properties" value="6" />
+          <entry key="XML" value="5" />
         </counts>
       </usages-collector>
     </session>
@@ -238,27 +259,77 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/room-services/pom.xml">
+        <entry file="file://$PROJECT_DIR$/reservation-business-services/src/main/java/com/selflearning/business/reservation/reservationbusinessservices/ReservationBusinessServicesApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="99" column="11" selection-start-line="99" selection-start-column="11" selection-end-line="99" selection-end-column="11" />
+            <state relative-caret-position="289">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/reservation-business-services/src/main/java/com/selflearning/business/reservation/reservationbusinessservices/web/rest/RoomReservationController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/eureka-server/eureka-server.iml">
+        <entry file="file://$PROJECT_DIR$/config-server/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/reservation-business-services/reservation-business-services.iml">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/room-services/src/main/java/com/selflearning/services/room/roomservices/RoomServicesApplication.java">
+        <entry file="file://$PROJECT_DIR$/reservation-business-services/pom.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/reservation-business-services/src/main/java/com/selflearning/business/reservation/reservationbusinessservices/domain/Room.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+            <state relative-caret-position="170">
+              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#233#234#0" expanded="true" />
+                <element signature="e#258#259#0" expanded="true" />
+                <element signature="e#292#293#0" expanded="true" />
+                <element signature="e#320#321#0" expanded="true" />
+                <element signature="e#351#352#0" expanded="true" />
+                <element signature="e#378#379#0" expanded="true" />
+                <element signature="e#418#419#0" expanded="true" />
+                <element signature="e#450#451#0" expanded="true" />
+                <element signature="e#487#488#0" expanded="true" />
+                <element signature="e#520#521#0" expanded="true" />
+                <element signature="e#572#573#0" expanded="true" />
+                <element signature="e#616#617#0" expanded="true" />
+                <element signature="e#650#651#0" expanded="true" />
+                <element signature="e#680#681#0" expanded="true" />
+                <element signature="e#726#727#0" expanded="true" />
+                <element signature="e#764#765#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/reservation-business-services/src/main/resources/bootstrap.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="1" selection-start-column="1" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -269,6 +340,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="AnnotationType" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -285,6 +357,7 @@
       <find>eure</find>
       <find>&lt;artifactId&gt;spring-cloud-starter-eureka&lt;/artifactId&gt;</find>
       <find>&lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;</find>
+      <find>Room</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -308,6 +381,10 @@
         <option value="$PROJECT_DIR$/eureka-server/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/room-services/src/main/java/com/selflearning/services/room/roomservices/RoomServicesApplication.java" />
         <option value="$PROJECT_DIR$/room-services/pom.xml" />
+        <option value="$PROJECT_DIR$/reservation-business-services/src/main/resources/bootstrap.properties" />
+        <option value="$PROJECT_DIR$/reservation-business-services/src/main/java/com/selflearning/business/reservation/reservationbusinessservices/domain/Room.java" />
+        <option value="$PROJECT_DIR$/reservation-business-services/src/main/java/com/selflearning/business/reservation/reservationbusinessservices/ReservationBusinessServicesApplication.java" />
+        <option value="$PROJECT_DIR$/reservation-business-services/src/main/java/com/selflearning/business/reservation/reservationbusinessservices/web/rest/RoomReservationController.java" />
       </list>
     </option>
   </component>
@@ -352,9 +429,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -365,12 +439,28 @@
             <path>
               <item name="spring-cloud-main" type="b2602c69:ProjectViewProjectNode" />
               <item name="spring-cloud-main" type="462c0819:PsiDirectoryNode" />
-              <item name="eureka-server" type="462c0819:PsiDirectoryNode" />
+              <item name="reservation-business-services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud-main" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-main" type="462c0819:PsiDirectoryNode" />
+              <item name="reservation-business-services" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud-main" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-main" type="462c0819:PsiDirectoryNode" />
+              <item name="reservation-business-services" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -381,7 +471,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1585749649661" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586285176450" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Exercise Files/Chapter 3/03_03/End/spring-cloud" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -418,7 +508,14 @@
     </option>
     <option name="contentProportion" value="0.21715611" />
   </component>
-  <component name="RunManager" selected="Spring Boot.room-services">
+  <component name="RunManager" selected="Spring Boot.ReservationBusinessServicesApplication">
+    <configuration name="ReservationBusinessServicesApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="reservation-business-services" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.selflearning.business.reservation.reservationbusinessservices.ReservationBusinessServicesApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="config-server" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="config-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.selflearning.service.config.configserver.ConfigServerApplication" />
@@ -447,6 +544,7 @@
       <item itemvalue="Spring Boot.room-services" />
       <item itemvalue="Spring Boot.config-server" />
       <item itemvalue="Spring Boot.eureka-server" />
+      <item itemvalue="Spring Boot.ReservationBusinessServicesApplication" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -466,7 +564,14 @@
       <workItem from="1585433792176" duration="1543000" />
       <workItem from="1585509391532" duration="6746000" />
       <workItem from="1585685976943" duration="6594000" />
-      <workItem from="1585744939936" duration="4091000" />
+      <workItem from="1585744939936" duration="8303000" />
+      <workItem from="1585859217112" duration="1012000" />
+      <workItem from="1585918579244" duration="265000" />
+      <workItem from="1586061828360" duration="466000" />
+      <workItem from="1586084968681" duration="3320000" />
+      <workItem from="1586195842220" duration="3563000" />
+      <workItem from="1586274884610" duration="1752000" />
+      <workItem from="1586281116641" duration="797000" />
     </task>
     <task id="LOCAL-00001" summary="Adding swagger configuration">
       <created>1585258101324</created>
@@ -510,16 +615,23 @@
       <option name="project" value="LOCAL" />
       <updated>1585749057149</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add-eureka-server-changes">
+      <created>1585749704423</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1585749704423</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47186000" />
+    <option name="totallyTimeSpent" value="62573000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12254161" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.33661118" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -533,15 +645,15 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4248366" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Run Dashboard" order="6" sideWeight="0.49924356" visible="true" weight="0.035947714" />
+      <window_info anchor="bottom" id="Run Dashboard" order="6" sideWeight="0.49924356" weight="0.32843137" />
       <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="Spring" order="8" />
+      <window_info anchor="bottom" id="Spring" order="8" weight="0.013071896" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32843137" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50075644" side_tool="true" weight="0.47712418" />
       <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32843137" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="14" weight="0.32843137" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="14" visible="true" weight="0.32843137" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24962178" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -580,7 +692,8 @@
     <MESSAGE value="application properties update" />
     <MESSAGE value="add-bootstrap.propertiesFile" />
     <MESSAGE value="add-eureka-serverToPeoject" />
-    <option name="LAST_COMMIT_MESSAGE" value="add-eureka-serverToPeoject" />
+    <MESSAGE value="add-eureka-server-changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="add-eureka-server-changes" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -673,13 +786,6 @@
     <entry file="file://$PROJECT_DIR$/config-server/pom.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/config-server/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="99" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/eureka-server/src/main/java/com/selflearning/discovery/eurekaserver/EnableEurekaServer.java" />
     <entry file="file://$PROJECT_DIR$/eureka-server/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -694,9 +800,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -725,19 +828,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/eureka-server/eureka-server.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="12" lean-forward="true" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reservation-business-services/.gitignore" />
+    <entry file="file://$PROJECT_DIR$/reservation-business-services/src/main/resources/application.properties" />
     <entry file="file://$PROJECT_DIR$/room-services/src/main/java/com/selflearning/services/room/roomservices/RoomServicesApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="9">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -748,8 +854,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/eureka-server/eureka-server.iml">
+    <entry file="file://$PROJECT_DIR$/../../Exercise Files/Chapter 3/03_04/End/spring-cloud/reservation-business-services/src/main/java/com/frankmoley/business/reservation/RoomReservationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="56" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reservation-business-services/src/main/java/com/selflearning/business/reservation/reservationbusinessservices/ReservationBusinessServicesApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reservation-business-services/src/main/java/com/selflearning/business/reservation/reservationbusinessservices/web/rest/RoomReservationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reservation-business-services/reservation-business-services.iml">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reservation-business-services/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reservation-business-services/src/main/java/com/selflearning/business/reservation/reservationbusinessservices/domain/Room.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding>
+            <element signature="e#233#234#0" expanded="true" />
+            <element signature="e#258#259#0" expanded="true" />
+            <element signature="e#292#293#0" expanded="true" />
+            <element signature="e#320#321#0" expanded="true" />
+            <element signature="e#351#352#0" expanded="true" />
+            <element signature="e#378#379#0" expanded="true" />
+            <element signature="e#418#419#0" expanded="true" />
+            <element signature="e#450#451#0" expanded="true" />
+            <element signature="e#487#488#0" expanded="true" />
+            <element signature="e#520#521#0" expanded="true" />
+            <element signature="e#572#573#0" expanded="true" />
+            <element signature="e#616#617#0" expanded="true" />
+            <element signature="e#650#651#0" expanded="true" />
+            <element signature="e#680#681#0" expanded="true" />
+            <element signature="e#726#727#0" expanded="true" />
+            <element signature="e#764#765#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reservation-business-services/src/main/resources/bootstrap.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config-server/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
@@ -803,7 +975,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>eureka-server</last-edited>
+          <last-edited>reservation-business-services</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
