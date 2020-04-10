@@ -1,5 +1,6 @@
 package com.selflearning.business.reservation.reservationbusinessservices.web.rest;
 
+import com.selflearning.business.reservation.reservationbusinessservices.client.RoomService;
 import com.selflearning.business.reservation.reservationbusinessservices.domain.Room;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
@@ -15,18 +16,22 @@ import java.util.List;
 @RestController
 public class RoomReservationController {
 
+//    @Autowired
+//    private RestTemplate restTemplate;
+
     @Autowired
-    private RestTemplate restTemplate;
+    private RoomService roomService;
 
     @RequestMapping(value = "/rooms", method = RequestMethod.GET)
     public List<Room> getAllRooms() {
-        ResponseEntity<List<Room>> roomResponse = this.restTemplate.exchange(
-                "http://ROOMSERVICES/rooms", HttpMethod.GET, null,
-                new ParameterizedTypeReference<List<Room>>(){
+//        ResponseEntity<List<Room>> roomResponse = this.restTemplate.exchange(
+//                "http://ROOMSERVICES/rooms", HttpMethod.GET, null,
+//                new ParameterizedTypeReference<List<Room>>(){
+//
+//                });
+//        return roomResponse.getBody();
 
-                });
-
-        return roomResponse.getBody();
+        return this.roomService.findAll(null);
 
     }
 }
